@@ -58,10 +58,9 @@ function displayProducts(productsArray) {
     const cardLink = document.createElement("a");
     cardLink.className = "btn btn-success";
     cardLink.href = "#";
-    cardLink.textContent = "Aggiungi al carrello";
+    cardLink.textContent = "Prouct details";
     cardLink.setAttribute("id", "productId");
     cardLink.dataset.productId = "_id"; //id del prodotto nell'array?
-    cardLink.addEventListener("click", addToCart);
     cardBody.appendChild(cardLink);
 
     card.appendChild(cardBody);
