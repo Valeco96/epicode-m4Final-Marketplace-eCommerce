@@ -78,7 +78,7 @@ function searchProduct(event) {
     return alert("Please enter a valid product name.");
   }
   let filteredProducts = allProducts.filter((product) =>
-    product.title.toLowerCase().includes(prodotto)
+    product.name.toLowerCase().includes(prodotto)
   );
 
   displayProducts(filteredProducts); //mostra solo i risultati trovati

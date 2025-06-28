@@ -13,17 +13,25 @@
     <style>
       .card-img-top {
         width: 220px;
-        height: 220px;
+        height: 240px;
         margin: 0 auto;
-        padding: 30px;
+        padding: 25px;
+      }
+
+      .active {
+        font-weight: 700;
+      }
+
+      .card {
+        border: 1px solid green;
       }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-success">
       <div class="container-fluid">
-        <i class="fa-solid fa-cloud mx-3"></i>
-        <a class="navbar-brand" href="#">MarketPlace</a>
+        <i class="fa-solid fa-cloud mx-3 text-white"></i>
+        <a class="navbar-brand text-white">MarketPlace</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,14 +46,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="backoffice.html">Backoffice</a>
+              <a class="nav-link text-white" href="backoffice.html"
+                >Backoffice</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="editProduct.html">Edit product</a>
+              <a class="nav-link text-white" href="editProduct.html"
+                >Edit product</a
+              >
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -53,7 +67,7 @@
               id="searchInput"
               class="form-control me-2"
               type="search"
-              placeholder="How can we help?"
+              placeholder="Search Marketplace"
               aria-label="Search"
             />
             <button
@@ -69,8 +83,8 @@
     </nav>
 
     <main>
-      <div id="search-box" class="container mt-5">
-        <h2 class="mb-5">Products:</h2>
+      <div id="search-box" class="container mt-5 mb-5">
+        <h2 class="mb-5 text-success">Best sellers:</h2>
 
         <!--un container per inserire le card con le immagini per layout della griglia-->
         <div id="cardsContainer" class="row mt-4 g-4 mx-4"></div>

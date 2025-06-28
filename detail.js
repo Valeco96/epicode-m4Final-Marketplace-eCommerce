@@ -23,7 +23,7 @@ async function getId() {
 
     prodContainer.innerHTML = `
     <h2 style="margin: 50px">${identification.name}</h2>
-    <div style="margin-top:80px" class="d-flex justify-content-around">
+    <div style="margin-top:80px" class="d-flex justify-content-around flex-wrap">
     <img src="${identification.imageUrl}" alt="${identification.alt}" width="100%" style="padding: 20px;" />
     <div> 
     <ul style="list-style: none; padding-left:0px"> 
