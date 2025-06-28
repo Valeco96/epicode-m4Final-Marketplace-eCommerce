@@ -52,7 +52,7 @@ function displayProducts(productsArray) {
 
     const cardText = document.createElement("p");
     cardText.className = "card-text";
-    cardText.textContent = `Price: ${product.price}`;
+    cardText.textContent = `Price: ${product.price}€`;
     cardBody.appendChild(cardText);
 
     const cardLink = document.createElement("a");

@@ -22,21 +22,29 @@ async function getId() {
     console.log(identification);
 
     prodContainer.innerHTML = `
-    <h2 class="">${identification.name}</h2>
-    <div class="d-flex justify-content-between">
-    <img src="${identification.imageUrl}" alt="${identification.alt}" width="200px" />
+    <h2 style="margin: 50px">${identification.name}</h2>
+    <div style="margin-top:80px" class="d-flex justify-content-around">
+    <img src="${identification.imageUrl}" alt="${identification.alt}" width="100%" style="padding: 20px;" />
     <div> 
-    <ul> 
-    <li>Brand:${identification.brand}</li>
-    <li>Product description:${identification.description}</li>
-    <li>Price:${identification.price}</li>
+    <ul style="list-style: none; padding-left:0px"> 
+    <li style="font-size:28px"><strong>Product details</strong> </li>
+    <br />
+    <li style="font-size:16px"><strong>Brand:</strong> ${identification.brand}</li>
+    <li style="font-size:16px"><strong>Product description:</strong> ${identification.description}</li>
+    <br />
+    <li style="font-size:16px"><strong>Price:</strong> ${identification.price}€</li>
     </ul>
+    <button style="margin-top: 20px" class="btn btn-outline-success" onclick="cartAlert()">Add to cart</button>
     </div>
     </div> 
     `;
   } catch (e) {
     console.log(e);
   }
+}
+
+function cartAlert() {
+  alert("Sorry, this function is not available yet!");
 }
 
 getId();
