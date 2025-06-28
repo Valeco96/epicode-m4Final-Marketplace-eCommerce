@@ -31,14 +31,14 @@ function displayProducts(productsArray) {
 
   productsArray.forEach((product) => {
     const col = document.createElement("div");
-    col.className = "col-md-4 col-lg-3";
+    col.className = "col-md-6 col-lg-4";
 
     const card = document.createElement("div");
     card.className = "card h-100";
 
     const img = document.createElement("img");
     img.className = "card-img-top";
-    img.src = product.img;
+    img.src = product.imageUrl;
     img.alt = product.alt;
     card.appendChild(img);
 
@@ -47,7 +47,7 @@ function displayProducts(productsArray) {
 
     const cardTitle = document.createElement("h5");
     cardTitle.className = "card-title";
-    cardTitle.textContent = product.title;
+    cardTitle.textContent = product.name;
     cardBody.appendChild(cardTitle);
 
     const cardText = document.createElement("p");
@@ -57,8 +57,8 @@ function displayProducts(productsArray) {
 
     const cardLink = document.createElement("a");
     cardLink.className = "btn btn-success";
-    cardLink.href = "#";
-    cardLink.textContent = "Prouct details";
+    cardLink.href = `detail.html?id=${product._id}`;
+    cardLink.textContent = "Product details";
     cardLink.setAttribute("id", "productId");
     cardLink.dataset.productId = "_id"; //id del prodotto nell'array?
     cardBody.appendChild(cardLink);
